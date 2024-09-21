@@ -21,7 +21,7 @@ resource "aws_network_acl_rule" "private_nacl_inbound_http" {
 
 resource "aws_network_acl_rule" "private_nacl_inbound_https" {
   network_acl_id = aws_network_acl.private_nacl.id
-  rule_number    = 110
+  rule_number    = 200
   egress         = false
   protocol       = "tcp"
   rule_action    = "allow"
@@ -32,7 +32,7 @@ resource "aws_network_acl_rule" "private_nacl_inbound_https" {
 
 resource "aws_network_acl_rule" "private_nacl_inbound_ssh" {
   network_acl_id = aws_network_acl.private_nacl.id
-  rule_number    = 120
+  rule_number    = 300
   egress         = false
   protocol       = "tcp"
   rule_action    = "allow"
