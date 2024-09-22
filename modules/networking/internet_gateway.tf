@@ -2,6 +2,6 @@ resource "aws_internet_gateway" "igw" {
   vpc_id = aws_vpc.main.id
 
   tags = {
-    Name = "aclguru-igw"
+    Name = "igw"
   }
 }
