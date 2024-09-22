@@ -28,6 +28,7 @@ This Terraform project is designed to provision a Virtual Private Cloud (VPC) on
 │   │   ├── nat_gateway.tf
 │   │   ├── internet_gateway.tf
 │   │   ├── route_tables.tf
+│   │   ├── nacl.tf
 │   │   ├── public_nacl.tf
 │   │   ├── private_nacl.tf
 │   │   ├── output.tf
