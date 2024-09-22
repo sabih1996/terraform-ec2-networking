@@ -28,16 +28,9 @@ module "ec2_instances" {
   private_sg        = module.security_groups.private_sg_id
 }
 
-module "public_nacl" {
-  source              = "./modules/networking"
-  vpc_cidr            = var.vpc_cidr
-  public_subnet_cidr  = var.public_subnet_cidr
-  private_subnet_cidr = var.private_subnet_cidr
-}
-
-module "private_nacl" {
-  source              = "./modules/networking"
-  vpc_cidr            = var.vpc_cidr
-  public_subnet_cidr  = var.public_subnet_cidr
-  private_subnet_cidr = var.private_subnet_cidr
+module "network_acl" {
+  source = "./modules/networking"
+  vpc_cidr             = var.vpc_cidr
+  public_subnet_cidr   = var.public_subnet_cidr
+  private_subnet_cidr  = var.private_subnet_cidr
 }
